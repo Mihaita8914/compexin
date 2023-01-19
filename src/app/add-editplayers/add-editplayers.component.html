@@ -1,0 +1,31 @@
+
+<!-- Add team -->
+
+<h1 mat-dialog-title>Adauga Jucator</h1>
+<div mat-dialog-content>
+  <form [formGroup]= "playerForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Nume Jucator</mat-label>
+      <input formControlName="NUME" matInput placeholder="Nume" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Prenume Jucator</mat-label>
+      <input formControlName="PRENUME" matInput placeholder="Prenume" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Data Nastere</mat-label>
+      <input formControlName="DATA_NASTERE" matInput placeholder="Data Nastere" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Id Echipa</mat-label>
+      <input formControlName="ID_ECHIPA" matInput placeholder=" Id Echipa" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Anuleaza</button>
+  <button style="margin-left: 8px; "mat-raised-button color="primary" (click)= "addPlayer()">{{actionBtn}}</button>
+</div>
